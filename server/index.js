@@ -11,9 +11,9 @@ app.use(cors());
 app.use(express.json({ limit: "50mb" }));
 app.use(express.urlencoded({ extended: true })); // for form data
 
-// app.post("/ankit",(req,res)=>{
-//   console.log(req.body);
-// })
+app.get("/",(req,res)=>{
+  res.send("hello")
+})
 
 app.use("/api/user/", UserRoutes);
 app.use("/api/food/", FoodRoutes);
