@@ -29,12 +29,6 @@ app.use((err, req, res, next) => {
   });
 }); 
 
-app.get("/", async (req, res) => {
-  res.status(200).json({
-    message: "Hello developers from GFG",
-  });
-}); 
-
 const connectDB = () => {
   mongoose.set("strictQuery", true);
   mongoose
